@@ -31,19 +31,11 @@ void binary_tree_print(const binary_tree_t *);
 
 /* binary tree */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
-<<<<<<< HEAD
-
-binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
-
-int binary_tree_is_leaf(const binary_tree_t *node);
-
-=======
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
 void binary_tree_delete(binary_tree_t *tree);
 int binary_tree_is_leaf(const binary_tree_t *node);
 int binary_tree_is_root(const binary_tree_t *node);
->>>>>>> 40aaf3926923dfcced7621ee0510b46ab4fe92d2
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
@@ -68,11 +60,5 @@ binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
 
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
-
-/* 10 */
-size_t binary_tree_depth(const binary_tree_t *tree);
-
-/* 12 */
-size_t binary_tree_leaves(const binary_tree_t *tree);
 
 #endif
