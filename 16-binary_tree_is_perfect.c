@@ -8,7 +8,7 @@
  */
 size_t find_left_depth(const binary_tree_t *tree)
 {
-	size_t depth_count = 0;
+	size_t depth_count = 1;
 
 	if (!tree)
 		return (0);
@@ -35,7 +35,7 @@ int is_perfect(const binary_tree_t *tree, int d, int level)
 		return (0);
 	/* Left and right subtrees must be perfect */
 	return (is_perfect(tree->left, d, level + 1)
-		&& is_perfect(tree->right, d, level + 1));
+			&& is_perfect(tree->right, d, level + 1));
 }
 
 /**
