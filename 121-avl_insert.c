@@ -47,9 +47,10 @@ avl_t *avl_insert(avl_t **tree, int value)
 	curr = *tree;
 	while (curr)
 	{
-		parent = curr;
 		if (value == curr->n)
 			return (curr);
+
+		parent = curr;
 		if (value < curr->n)
 			curr = curr->left;
 		else
