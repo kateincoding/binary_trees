@@ -1,6 +1,29 @@
 #include "binary_trees.h"
 
 /**
+ * create_node - Creates a new node and sets its parento to parent
+ * @parent: parent of the new node
+ * @value: Value for the new node
+ *
+ * Return: Pointer to the newly created node
+ */
+heap_t *create_node(heap_t *parent, int value)
+{
+	heap_t *new_node = NULL;
+
+	new_node = malloc(sizeof(*new_node));
+	if (!new_node)
+		return (NULL);
+
+	new_node->parent = parent;
+	new_node->left = NULL;
+	new_node->right = NULL;
+	new_node->n = value;
+
+	return (new_node);
+}
+
+/**
  * count_nodes - Counts the number of nodes inside a tree
  * @root: Pointer to tree's root node
  *
@@ -61,7 +84,7 @@ heap_t *insert_node(heap_t *root, int size, int index, int pind, int value)
 
 	if (index == pind)
 	{
-		new_node = binary_tree_node(root, value);
+		new_node = create_node(root, value);
 		if (!root->left)
 			root->left = new_node;
 		else
@@ -97,7 +120,7 @@ heap_t *heap_insert(heap_t **root, int value)
 		return (NULL);
 
 	if (!(*root))
-		return (*root = binary_tree_node(NULL, value));
+		return (*root = create_node(NULL, value));
 
 	nodes = count_nodes(*root);
 	pind = (nodes - 1) / 2;
