@@ -84,7 +84,7 @@ heap_t *get_parent(heap_t *root, int index, int pind)
  */
 void remove_last_node(heap_t **root, heap_t *parent)
 {
-	if (!parent)
+	if (parent == *root && !parent->left)
 	{
 		free(*root);
 		*root = NULL;
