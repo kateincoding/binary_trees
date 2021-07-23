@@ -17,10 +17,10 @@ avl_t *recursion_sorted_array(int *array, int first_idx, int last_idx)
 	/* sort each branch */
 	root->left = recursion_sorted_array(array, first_idx, middle - 1);
 	root->right = recursion_sorted_array(array, middle + 1, last_idx);
+	if (root->left)
+		root->left->parent = root;
 	if (root->right)
 		root->right->parent = root;
-	else if (root->left)
-		root->left->parent = root;
 	return (root);
 }
 
