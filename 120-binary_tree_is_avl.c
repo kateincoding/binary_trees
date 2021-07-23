@@ -23,20 +23,25 @@ size_t binary_tree_height_auxx(const binary_tree_t *tree)
 	return (hright);
 }
 
+/**
+ * is_balanced - recursive fx that check if it is balanced or not
+ * @root: Pointer to tree's root
+ * Return: 1 if it is balanced; otherwise 0
+ */
 int is_balanced(const binary_tree_t *root)
 {
-	int lh;/* for height of left subtree */
-	int rh;/* for height of right subtree */
+	int left_height;
+	int right_height;
  
 	/* If tree is empty then return true */
-	if (root == NULL)
+	if (!root)
 		return (1);
  
 	/* Get the height of left and right sub trees */
-	lh = binary_tree_height_auxx(root->left);
-	rh = binary_tree_height_auxx(root->right);
+	left_height = binary_tree_height_auxx(root->left);
+	right_height = binary_tree_height_auxx(root->right);
  
-	if (abs(lh - rh) <= 1 && is_balanced(root->left) && is_balanced(root->right))
+	if (abs(left_height - right_height) == 0 && is_balanced(root->left) && is_balanced(root->right))
 		return (1);
 	/* If we reach here then tree is not height-balanced */
 	return (0);
