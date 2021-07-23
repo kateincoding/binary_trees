@@ -23,24 +23,37 @@ void set_parent_child(avl_t *parent, avl_t *node, avl_t *val)
 */
 avl_t *balance_avl_tree(avl_t *node)
 {
-	int bf; /* balance factor */
+	int bf, bleft, bright; /* balance factor */
 	avl_t *new_root = NULL;
 
 	if (!node || (!node->left && !node->right))
 		return (NULL);
 
 	bf = binary_tree_balance(node);
+	bleft = binary_tree_balance(node->left);
+	bright = binary_tree_balance(node->right);
 
-	if (bf > 1 && node->left)
+	if (bf > 1 && bleft > 1)
 		new_root = binary_tree_rotate_right(node);
-	else if (bf < -1 && node->right)
+	else if (bf < -1 && bright < -1)
 		new_root = binary_tree_rotate_left(node);
+	else if (bf > 1 && bleft < -1)
+	{
+		binary_tree_rotate_left(node->left);
+		new_root = binary_tree_rotate_right(node);
+	}
+	else if (bf < -1 && bright > 1)
+	{
+		binary_tree_rotate_right(node->right);
+		new_root = binary_tree_rotate_left(node);
+	}
 
-	if (new_root && !new_root->parent)
+	if (new_root && new_root->parent == NULL)
 		return (new_root);
 
 	return (node);
 }
+
 
 /**
  * remove_node - Removes a node from an AVL tree
@@ -55,7 +68,6 @@ avl_t *remove_node(avl_t *root, avl_t *node)
 
 	if (!root || !node)
 		return (NULL);
-
 	parent = node->parent;
 	if (!node->left && !node->right)
 	{
@@ -83,18 +95,14 @@ avl_t *remove_node(avl_t *root, avl_t *node)
 		parent = curr->parent;
 		free(curr);
 	}
-
 	binary_tree_print(root);
-
 	while (parent)
 	{
 		new_root = balance_avl_tree(parent);
 		parent = parent->parent;
 	}
-
 	if (new_root && !new_root->parent)
 		return (new_root);
-
 	return (root);
 }
 
