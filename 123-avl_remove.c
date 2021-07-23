@@ -73,8 +73,6 @@ avl_t *remove_node(avl_t *root, avl_t *node)
 	{
 		set_parent_child(parent, node, NULL);
 		free(node);
-		if (!parent)
-			return (NULL);
 	}
 	else if (!node->right)
 	{
@@ -82,8 +80,6 @@ avl_t *remove_node(avl_t *root, avl_t *node)
 		curr->parent = parent;
 		set_parent_child(parent, node, curr);
 		free(node);
-		if (!parent)
-			return (curr);
 	}
 	else
 	{
@@ -91,10 +87,14 @@ avl_t *remove_node(avl_t *root, avl_t *node)
 		while (curr->left)
 			curr = curr->left;
 		node->n = curr->n;
-		set_parent_child(curr->parent, curr, NULL);
+		set_parent_child(curr->parent, curr, curr->right);
+		if (curr->right)
+			curr->right->parent = curr->parent;
 		parent = curr->parent;
 		free(curr);
 	}
+	if (!parent)
+		return (curr);
 	while (parent)
 	{
 		new_root = balance_avl_tree(parent);
