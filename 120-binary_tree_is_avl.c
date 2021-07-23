@@ -32,21 +32,28 @@ int is_balanced(const binary_tree_t *root)
 {
 	int left_height;
 	int right_height;
- 
+
 	/* If tree is empty then return true */
 	if (!root)
 		return (1);
- 
+
 	/* Get the height of left and right sub trees */
 	left_height = binary_tree_height_auxx(root->left);
 	right_height = binary_tree_height_auxx(root->right);
- 
-	if (abs(left_height - right_height) == 0 && is_balanced(root->left) && is_balanced(root->right))
+
+	if (abs(left_height - right_height) <= 1 && is_balanced(root->left)
+		&& is_balanced(root->right))
 		return (1);
-	/* If we reach here then tree is not height-balanced */
+	/* tree is not height-balanced */
 	return (0);
 }
 
+/**
+ * binary_tree_is_avl - function that checks if a
+ * binary tree is a valid AVL Tree
+ * @tree: Pointer to tree's root
+ * Return: 1 if it is balanced; otherwise 0
+ */
 int binary_tree_is_avl(const binary_tree_t *tree)
 {
 	if (!tree)
