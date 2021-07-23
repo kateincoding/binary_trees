@@ -33,9 +33,9 @@ avl_t *balance_avl_tree(avl_t *node)
 	bleft = binary_tree_balance(node->left);
 	bright = binary_tree_balance(node->right);
 
-	if (bf > 1 && bleft > 1)
+	if (bf > 1 && bleft >= -1 && bleft <= 1)
 		new_root = binary_tree_rotate_right(node);
-	else if (bf < -1 && bright < -1)
+	else if (bf < -1 && bright >= -1 && bright <= 1)
 		new_root = binary_tree_rotate_left(node);
 	else if (bf > 1 && bleft < -1)
 	{
