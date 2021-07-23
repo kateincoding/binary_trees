@@ -24,6 +24,44 @@ size_t binary_tree_height_auxx(const binary_tree_t *tree)
 }
 
 /**
+ * aux_recursion_bst - check if each node has in the
+ * left a less value than himself
+ * @root: node to check
+ * @min_left: min value to check with the node at the left
+ * @max_right: max value to check with the node at the right
+ * Return: 1 if is a BST or 0 otherwise
+ */
+int aux_recursion_bst(const binary_tree_t *root,
+	   const binary_tree_t *min_left, const binary_tree_t *max_right)
+{
+	if (root == NULL)
+		return (1);
+
+	if (min_left != NULL && root->n <= min_left->n)
+		return (0);
+
+	if (max_right != NULL && root->n >= max_right->n)
+		return (0);
+
+	return (aux_recursion_bst(root->left, min_left, root) &&
+		aux_recursion_bst(root->right, root, max_right));
+}
+
+/**
+ * aux_is_bst - checks if a binary tree is a valid Binary Search Tree
+ * @tree: a pointer to the root node of the tree to checkgooo
+ * Return: 1 if tree is a nid BST, and 0 otherwise
+ * If tree is NULL, return 0
+ */
+int aux_is_bst(const binary_tree_t *tree)
+{
+	if (!tree)
+		return (0);
+
+	return (aux_recursion_bst(tree, NULL, NULL));
+}
+
+/**
  * is_balanced - recursive fx that check if it is balanced or not
  * @root: Pointer to tree's root
  * Return: 1 if it is balanced; otherwise 0
@@ -36,6 +74,9 @@ int is_balanced(const binary_tree_t *root)
 	/* If tree is empty then return true */
 	if (!root)
 		return (1);
+
+	if (!aux_is_bst(root))
+		return (0);
 
 	/* Get the height of left and right sub trees */
 	left_height = binary_tree_height_auxx(root->left);
