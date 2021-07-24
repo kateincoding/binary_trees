@@ -78,7 +78,7 @@ bst_t *bst_remove(bst_t *root, int value)
 
 	while (curr)
 	{
-		if (value == root->n)
+		if (value == curr->n)
 			return (remove_node(root, curr));
 
 		if (value < curr->n)
