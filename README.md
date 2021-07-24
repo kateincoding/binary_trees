@@ -6,20 +6,20 @@
 ## Resources
 Read or watch:
 
-Binary tree (note the first line: Not to be confused with B-tree.)
-Data Structure and Algorithms - Tree
-Tree Traversal
-Binary Search Tree
-Data structures: Binary Tree
+* [Binary tree](https://intranet.hbtn.io/rltoken/YjCgugjFZBKqIeU2_lF-fQ) note the first line: Not to be confused with B-tree.)
+* [Data Structure and Algorithms - Tree](https://intranet.hbtn.io/rltoken/YERnIz9OggXbBoXpiqSMEw)
+* [Tree Traversal](https://intranet.hbtn.io/rltoken/pR4-vwFxzbph4FkMF2np1Q)
+* [Binary Search Tree](https://intranet.hbtn.io/rltoken/L2CpULSk9hQEOBKaGI8IkQ)
+* [Data structures: Binary Tree](https://intranet.hbtn.io/rltoken/jQNFgIuh8O73TqIaFeQoPA)
 
 ## Learning Objectives
 
-What is a binary tree
-What is the difference between a binary tree and a Binary Search Tree
-What is the possible gain in terms of time complexity compared to linked lists
-What are the depth, the height, the size of a binary tree
-What are the different traversal methods to go through a binary tree
-What is a complete, a full, a perfect, a balanced binary tree
+* What is a binary tree
+* What is the difference between a binary tree and a Binary Search Tree
+* What is the possible gain in terms of time complexity compared to linked lists
+* What are the depth, the height, the size of a binary tree
+* What are the different traversal methods to go through a binary tree
+* What is a complete, a full, a perfect, a balanced binary tree
 
 ## Data structures
 
@@ -101,6 +101,12 @@ typedef struct binary_tree_s heap_t;
 23|[Rotate right](104-binary_tree_rotate_right.c)|Function that performs a right-rotation on a binary tree
 24|[Is BST](110-binary_tree_is_bst.c)|Function that checks if a binary tree is a valid [Binary Search Tree](https://intranet.hbtn.io/rltoken/L2CpULSk9hQEOBKaGI8IkQ)
 25|[BST - Insert](111-bst_insert.c)|Function that inserts a value in a Binary Search Tree
+26|[BST - Array to BST](112-array_to_bst.c)|Function that builds a Binary Search Tree from an array
+27|[BST - Search](113-bst_search.c)|Function that searches for a value in a Binary Search Tree
+28|[BST - Remove](114-bst_remove.c)|Function that removes a node from a Binary Search Tree
+29|[Big O #BST](115-O)|average time complexities of those operations on a Binary Search Tree: Inserting the value n, Removing the node with the value n, Searching for a node in a BST of size n
+30|[Is AVL](120-binary_tree_is_avl.c)|Function that checks if a binary tree is a valid [AVL Tree](https://intranet.hbtn.io/rltoken/zawOf_VUKC0zTBPbKFv4Vg)
+31|[AVL - Insert](121-avl_insert.c)|Function that inserts a value in an AVL Tree
 
 ## Authors:
 * Katherine Soto | <img alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />[GitHub](https://github.com/kateincoding)
