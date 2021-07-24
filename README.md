@@ -107,6 +107,11 @@ typedef struct binary_tree_s heap_t;
 29|[Big O #BST](115-O)|average time complexities of those operations on a Binary Search Tree: Inserting the value n, Removing the node with the value n, Searching for a node in a BST of size n
 30|[Is AVL](120-binary_tree_is_avl.c)|Function that checks if a binary tree is a valid [AVL Tree](https://intranet.hbtn.io/rltoken/zawOf_VUKC0zTBPbKFv4Vg)
 31|[AVL - Insert](121-avl_insert.c)|Function that inserts a value in an AVL Tree
+32|[AVL - Array to AVL](122-array_to_avl.c)|Function that builds an AVL tree from an array
+33|[AVL - Remove](123-avl_remove.c)|Function that removes a node from an AVL tree
+34|[AVL - From sorted array](124-sorted_array_to_avl.c)|Function that builds an AVL tree from an array
+35|[Big O #AVL Tree](125-O)|Inserting the value n ; Removing the node with the value n; Searching for a node in an AVL tree of size n
+36|[Is Binary heap](130-binary_tree_is_heap.c)|Function that checks if a binary tree is a valid [Max Binary Heap](https://intranet.hbtn.io/rltoken/St8ewcG2JJuWmkSNTfe29g)
 
 ## Authors:
 * Katherine Soto | <img alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />[GitHub](https://github.com/kateincoding)
