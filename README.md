@@ -61,3 +61,8 @@ typedef struct binary_tree_s heap_t;
 
 ## Print function
 [print_function](https://github.com/holbertonschool/0x1C.c)
+
+
+## Authors:
+* Renato León |   <img alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" /> [GitHub](https://github.com/rennleon)
+* Katherine Soto | <img alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />[GitHub](https://github.com/kateincoding)
