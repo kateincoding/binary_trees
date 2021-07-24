@@ -86,6 +86,16 @@ typedef struct binary_tree_s heap_t;
 8|[Post-order traversal](8-binary_tree_postorder.c)|Function that goes through a binary tree using post-order traversal
 9|[Height](9-binary_tree_height.c)|Function that measures the height of a binary tree
 10|[Depth](10-binary_tree_depth.c)|Function that measures the depth of a node in a binary tree
+11|[Size](11-binary_tree_size.c)|Function that measures the size of a binary tree
+12|[Leaves](12-binary_tree_leaves.c)|Function that counts the leaves in a binary tree
+13|[Nodes](13-binary_tree_nodes.c)|Function that counts the nodes with at least 1 child in a binary tree
+14|[Balance factor](14-binary_tree_balance.c)|Function that measures the balance factor of a binary tree
+15|[Is full](15-binary_tree_is_full.c)|Function that checks if a binary tree is full
+16|[Is perfect](16-binary_tree_is_perfect.c)|Function that checks if a binary tree is perfect
+17|[Sibling](17-binary_tree_sibling.c)|Function that finds the sibling of a node
+18|[Uncle](18-binary_tree_uncle.c)|Function that finds the uncle of a node
+19|[Lowest common ancestor](100-binary_trees_ancestor.c)|Function that finds the lowest common ancestor of two nodes
+20|[Level-order traversal](101-binary_tree_levelorder.c)|Function that goes through a binary tree using level-order traversal
 
 ## Authors:
 * Katherine Soto | <img alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />[GitHub](https://github.com/kateincoding)
