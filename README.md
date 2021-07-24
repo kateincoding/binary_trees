@@ -96,6 +96,11 @@ typedef struct binary_tree_s heap_t;
 18|[Uncle](18-binary_tree_uncle.c)|Function that finds the uncle of a node
 19|[Lowest common ancestor](100-binary_trees_ancestor.c)|Function that finds the lowest common ancestor of two nodes
 20|[Level-order traversal](101-binary_tree_levelorder.c)|Function that goes through a binary tree using level-order traversal
+21|[Is complete](102-binary_tree_is_complete.c)|Function that checks if a binary tree is complete
+22|[Rotate left](103-binary_tree_rotate_left.c)|Function that performs a left-rotation on a binary tree
+23|[Rotate right](104-binary_tree_rotate_right.c)|Function that performs a right-rotation on a binary tree
+24|[Is BST](110-binary_tree_is_bst.c)|Function that checks if a binary tree is a valid [Binary Search Tree](https://intranet.hbtn.io/rltoken/L2CpULSk9hQEOBKaGI8IkQ)
+25|[BST - Insert](111-bst_insert.c)|Function that inserts a value in a Binary Search Tree
 
 ## Authors:
 * Katherine Soto | <img alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />[GitHub](https://github.com/kateincoding)
