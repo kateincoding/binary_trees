@@ -43,29 +43,18 @@ bst_t *remove_node(bst_t *root, bst_t *node)
 	parent = node->parent;
 
 	if (!node->left && !node->right)
-	{
-		printf("1 case\n");
 		new_root = remove_child(parent, node, NULL);
-	}
 	if (!node->right)
-	{
-		printf("2 case\n");
 		new_root = remove_child(parent, node, node->left);
-	}
 	else
 	{
-		printf("3 case\n");
 		curr = node->right;
 		while (curr->left)
 			curr = curr->left;
 
-		printf("node: %d\n", node->n);
 		node->n = curr->n;
-
-		printf("node: %d\n", node->n);
 		new_root = remove_child(curr->parent, curr, curr->right);
 	}
-
 
 	if (new_root)
 		return (new_root);
