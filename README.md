@@ -112,6 +112,11 @@ typedef struct binary_tree_s heap_t;
 34|[AVL - From sorted array](124-sorted_array_to_avl.c)|Function that builds an AVL tree from an array
 35|[Big O #AVL Tree](125-O)|Inserting the value n ; Removing the node with the value n; Searching for a node in an AVL tree of size n
 36|[Is Binary heap](130-binary_tree_is_heap.c)|Function that checks if a binary tree is a valid [Max Binary Heap](https://intranet.hbtn.io/rltoken/St8ewcG2JJuWmkSNTfe29g)
+37|[Heap - Insert](131-heap_insert.c)|function that inserts a value in Max Binary Heap
+38|[Heap - Array to Binary Heap](132-array_to_heap.c)|function that builds a Max Binary Heap tree from an array
+39|[Heap - Extract](133-heap_extract.c)|Function that extracts the root node of a Max Binary Heap
+40|[Heap - Sort](134-heap_to_sorted_array.c)|Function that converts a Binary Max Heap to a sorted array of integers
+41|[Big O #Binary Heap](135-O)|average time complexities: Inserting the value n, Extracting the root node, Searching for a node in a binary heap of size n
 
 ## Authors:
 * Katherine Soto | <img alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />[GitHub](https://github.com/kateincoding)
