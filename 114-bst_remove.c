@@ -35,20 +35,22 @@ bst_t *remove_child(bst_t *parent, bst_t *child, bst_t *val)
  */
 bst_t *remove_node(bst_t *root, bst_t *node)
 {
-	bst_t *parent = NULL, *new_root = NULL, *curr = NULL;
+	bst_t *parent, *ch_left, *ch_right, *curr, *new_root = NULL;
 
 	if (!node)
 		return (NULL);
 
 	parent = node->parent;
+	ch_left = node->left;
+	ch_right = node->right;
 
-	if (!node->left && !node->right)
+	if (!ch_left && !ch_right)
 		new_root = remove_child(parent, node, NULL);
-	if (!node->right)
-		new_root = remove_child(parent, node, node->left);
+	else if (!ch_right)
+		new_root = remove_child(parent, node, ch_left);
 	else
 	{
-		curr = node->right;
+		curr = ch_right;
 		while (curr->left)
 			curr = curr->left;
 
@@ -58,6 +60,9 @@ bst_t *remove_node(bst_t *root, bst_t *node)
 
 	if (new_root)
 		return (new_root);
+
+	if (!parent && !ch_left && !ch_right)
+		return (NULL);
 
 	return (root);
 }
